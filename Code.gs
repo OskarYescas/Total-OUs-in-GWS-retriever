@@ -1,8 +1,10 @@
 function listAllOrganizationalUnits() {
+    const properties = PropertiesService.getScriptProperties();
+    const customer = properties.getProperty('CUSTOMER_ID');
   try {
     // 'my_customer' is an alias for the account's customerId
     // type: 'all' ensures we get the full hierarchy, not just immediate children
-    const response = AdminDirectory.Orgunits.list('my_customer', {
+    const response = AdminDirectory.Orgunits.list(customer, {
       type: 'all'
     });
 
