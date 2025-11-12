@@ -1,4 +1,4 @@
-function listAllOrganizationalUnits() {
+function ListAllOUs() {
   try {
     // 'my_customer' is an alias for the account's customerId
     // type: 'all' ensures we get the full hierarchy, not just immediate children
